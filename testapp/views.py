@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.template import loader
 from .forms import UserForm
 from .tasks import add,fft_random

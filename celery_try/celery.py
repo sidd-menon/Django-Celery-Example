@@ -5,9 +5,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'celery_try.settings')
 from django.conf import settings
 from celery import Celery
 
-app = Celery('celery_try',
-             backend='amqp',
-             broker='amqp://guest@localhost//')
+app = Celery('celery_try')
 
 # This reads, e.g., CELERY_ACCEPT_CONTENT = ['json'] from settings.py:
 app.config_from_object('django.conf:settings')
